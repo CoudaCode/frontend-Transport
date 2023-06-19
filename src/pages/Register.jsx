@@ -39,7 +39,7 @@ function Register() {
     const handleOnSubmit = async (e) =>{
         e.preventDefault();
         try {
-            const {data} = await axios.post('http://localhost:4000/user/addUser',{
+            const {data} = await axios.post('https://backendapitransport.onrender.com/user/addUser',{
               ...inputValue
             },
             { withCredentials: true })
