@@ -49,7 +49,7 @@ function Register() {
             if (success) {
               handleSuccess(message);
               setTimeout(() => {
-                navigate("/login");
+                navigate("https://backendapitransport.onrender.com/user/login");
               }, 1000);
             }else{
               handleError(message);
