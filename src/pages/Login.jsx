@@ -47,7 +47,7 @@ function Login() {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          navigate("https://backendapitransport.onrender.com/user/");
+          navigate("/");
         }, 1000);
       } else {
         handleError(message);
