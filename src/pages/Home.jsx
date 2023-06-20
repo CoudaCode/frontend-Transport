@@ -22,6 +22,7 @@ function Home() {
         { withCredentials: true }
       );
       const { status, user } = data;
+      console.log(data)
       setUsername(`${user.name} ${user.lastname}`);
       return status
         ? toast(`Hello ${user.name} ${user.lastname}`, {
