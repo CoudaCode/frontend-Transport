@@ -17,12 +17,12 @@ function Home() {
         navigate("/login");
       }
       const { data } = await axios.post(
-        "https://backendapitransport.onrender.com/user",
+        "http://localhost:4000/user",
         {},
         { withCredentials: true }
       );
       const { status, user } = data;
-      console.log(data)
+      console.log(data);
       setUsername(`${user.name} ${user.lastname}`);
       return status
         ? toast(`Hello ${user.name} ${user.lastname}`, {
@@ -49,7 +49,6 @@ function Home() {
         <button onClick={Logout}>LOGOUT</button>
       </div>
       <ToastContainer />
-      
     </>
   );
 }

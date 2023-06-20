@@ -35,11 +35,12 @@ function Register() {
         position: "bottom-right",
       });
 
+      
   // Creation du bouton submit
     const handleOnSubmit = async (e) =>{
         e.preventDefault();
         try {
-            const {data} = await axios.post('https://backendapitransport.onrender.com/user/addUser',{
+            const {data} = await axios.post('http://localhost:4000/user/addUser',{
               ...inputValue
             },
             { withCredentials: true })
@@ -53,7 +54,6 @@ function Register() {
               }, 1000);
             }else{
               handleError(message);
-             
             }
         } catch (error) {
           console.log(error)
