@@ -1,5 +1,5 @@
 
-body {
+/* body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +10,7 @@ body {
     rgba(0, 212, 255, 1) 100%
   );
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+} */
 
 .form_container {
   background-color: #fff;
@@ -62,7 +62,7 @@ body {
   border-radius: 0.3rem;
 }
 
-span a {
+.form_container span a {
   text-decoration: none;
   color: rgba(0, 212, 255, 1);
 }

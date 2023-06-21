@@ -69,7 +69,7 @@ function Register() {
     } 
   return (
     <>
-      <div className="" style={{width:"18rem", margin:"10% auto"}} >
+      <div className="form_container" style={{width:"18rem", margin:"10% auto"}} >
       <h2>S'enregister</h2>
       <form  className="form" onSubmit={handleOnSubmit}>
         <div>
