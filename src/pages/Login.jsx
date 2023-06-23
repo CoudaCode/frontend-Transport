@@ -2,27 +2,25 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-import './../Register.css'
+import "./../Register.css";
 import "react-toastify/dist/ReactToastify.css";
 
-
-
 function Login() {
-    const navigate = useNavigate();
-    const [inputValue, setInputValue] = useState({
-      email: "",
-      password: "",
+  const navigate = useNavigate();
+  const [inputValue, setInputValue] = useState({
+    email: "",
+    password: "",
+  });
+  const { email, password } = inputValue;
+  const handleOnChange = (e) => {
+    const { name, value } = e.target;
+    setInputValue({
+      ...inputValue,
+      [name]: value,
     });
-    const { email, password } = inputValue;
-    const handleOnChange = (e) => {
-      const { name, value } = e.target;
-      setInputValue({
-        ...inputValue,
-        [name]: value,
-      });
-    };
-// Fonction Pour les Toast
-    const handleError = (err) =>
+  };
+  // Fonction Pour les Toast
+  const handleError = (err) =>
     toast.error(err, {
       position: "bottom-left",
     });
@@ -30,7 +28,6 @@ function Login() {
     toast.success(msg, {
       position: "bottom-left",
     });
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -52,7 +49,7 @@ function Login() {
       } else {
         handleError(message);
       }
-    } catch (error){
+    } catch (error) {
       console.log(error);
     }
     setInputValue({
@@ -61,43 +58,53 @@ function Login() {
       password: "",
     });
   };
-    return (
-      <>
-           <div className=".form_container" style={{width:"18rem", margin:"10% auto"}} >
-      <h2>S'enregister</h2>
-      <form  className="form" onSubmit={handleSubmit}>
-        <div>
-          <label className="form-label" htmlFor="email">Email</label>
-          <input
-            className="form-control"
-            type="email"
-            name="email"
-            value={email}
-            placeholder="Entrer Votre Email"
-            onChange={handleOnChange}
-          />
-        </div>
-        <div>
-          <label className="form-label" htmlFor="password">Password</label>
-          <input
-            className="form-control"
-            type="password"
-            name="password"
-            value={password}
-            placeholder="Enter your password"
-            onChange={handleOnChange}
-          />
-        </div>
-        
-        <button type="submit" className="btn btn-primary mt-1">Submit</button><br />
-        <span>
-          Vous n'avez pas de compte? <Link to={"/Register"}>S'inscrire</Link>
-        </span>
-      </form>
-      <ToastContainer />
-    </div>    
-      </>
-    )
+  return (
+    <>
+      <div
+        className=".form_container"
+        style={{ width: "18rem", margin: "10% auto" }}
+      >
+        <h2>S'enregister</h2>
+        <form className="form" onSubmit={handleSubmit}>
+          <div>
+            <label className="form-label" htmlFor="email">
+              Email
+            </label>
+            <input
+              className="form-control"
+              type="email"
+              name="email"
+              value={email}
+              placeholder="Entrer Votre Email"
+              onChange={handleOnChange}
+            />
+          </div>
+          <div>
+            <label className="form-label" htmlFor="password">
+              Password
+            </label>
+            <input
+              className="form-control"
+              type="password"
+              name="password"
+              value={password}
+              placeholder="Enter your password"
+              onChange={handleOnChange}
+            />
+          </div>
+
+          <button type="submit" className="btn btn-primary mt-1">
+            Submit
+          </button>
+          <br />
+          <span>
+            Vous n'avez pas de compte? <Link to={"/Register"}>S'inscrire</Link>
+          </span>
+        </form>
+        <ToastContainer />
+      </div>
+    </>
+  );
 }
 
-export default Login
+export default Login;

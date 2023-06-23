@@ -4,7 +4,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function Reservation() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [ville, setVille] = useState([]);
 
   const [form, setForm] = useState({
@@ -14,8 +14,19 @@ function Reservation() {
     telephone: "",
     villeDepart: "",
     villeArrive: "",
+    datVoyage: "",
+    heureVoyage: "",
   });
-  const { nom, prenom, email, telephone, villeArrive,datVoyage,heureVoyage, villeDepart } = form;
+  const {
+    nom,
+    prenom,
+    email,
+    telephone,
+    villeArrive,
+    datVoyage,
+    heureVoyage,
+    villeDepart,
+  } = form;
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setForm({
@@ -23,8 +34,8 @@ function Reservation() {
       [name]: value,
     });
   };
-  const nowValue = new Date().getDate()
-  console.log(nowValue)
+  const nowValue = new Date().getDate();
+  console.log(nowValue);
   function fetchData() {
     fetch("http://localhost:4000/Reservation/ville")
       .then((resp) => resp.json())
@@ -38,54 +49,55 @@ function Reservation() {
     fetchData();
   }, []);
 
- 
   const handleError = (err) =>
-      toast.error(err, {
-        position: "bottom-left",
-      });
-    const handleSuccess = (msg) =>
-      toast.success(msg, {
-        position: "bottom-right",
-      });
+    toast.error(err, {
+      position: "bottom-left",
+    });
+  const handleSuccess = (msg) =>
+    toast.success(msg, {
+      position: "bottom-right",
+    });
 
-  async function handleSubmit(e){
+  async function handleSubmit(e) {
     e.preventDefault();
-        try {
-           
-            const {data} = await axios.post('http://localhost:4000/Reservation/addReservation',{
-              ...form
-            },
-            { withCredentials: true })
-            const { success, message } = data;
-            
-            if (success) {
-              handleSuccess(message);
-              setTimeout(() => {
-                navigate("/");
-              }, 1000);
-            }else{
-              handleError(message);
-            }
-        } catch (error) {
-          console.log(error)
-        }
-        setForm({
+    try {
+      const { data } = await axios.post(
+        "http://localhost:4000/Reservation/addReservation",
+        {
           ...form,
-            nom: "",
-            prenom: "",
-            email: "",
-            telephone: "",
-            villeDepart: "",
-            villeArrive: "",
-            datVoyage:"",
-            heureVoyage:""
-          });
+        },
+        { withCredentials: true }
+      );
+      const { success, message } = data;
+
+      if (success) {
+        handleSuccess(message);
+        setTimeout(() => {
+          navigate("/");
+        }, 1000);
+      } else {
+        handleError(message);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+    setForm({
+      ...form,
+      nom: "",
+      prenom: "",
+      email: "",
+      telephone: "",
+      villeDepart: "",
+      villeArrive: "",
+      datVoyage: "",
+      heureVoyage: "",
+    });
   }
   return (
     <>
       <div
         className="reservation"
-        style={{ width: "400px", margin: "20% auto" }}
+        style={{ width: "400px", margin: "10% auto" }}
       >
         <form onSubmit={handleSubmit}>
           <div className="row mb-4">
@@ -101,7 +113,6 @@ function Reservation() {
                   value={nom}
                   className="form-control"
                   onChange={handleOnChange}
-                  placeholder={ville[0]}
                 />
               </div>
             </div>
@@ -136,7 +147,7 @@ function Reservation() {
               onChange={handleOnChange}
             />
           </div>
-        
+
           {/* <!-- Number input --> */}
           <div className="form-outline mb-4">
             <label className="form-label" htmlFor="telephone">
@@ -165,15 +176,13 @@ function Reservation() {
               {/* <option value="Abidjan">Abidjan</option>
               <option value="BOuake">Bouake</option>
               <option value="Odienne">Odienne</option> */}
-              {
-                ville.map(cityArray=>{
-                    
-                      return(
-                        <option key={cityArray} value={cityArray}>{cityArray}</option>
-                      )
-                    })
-                
-              }
+              {ville.map((cityArray) => {
+                return (
+                  <option key={cityArray} value={cityArray}>
+                    {cityArray}
+                  </option>
+                );
+              })}
             </select>
           </div>
           <div className="form-outline mb-4">
@@ -186,15 +195,13 @@ function Reservation() {
               value={villeArrive}
               className="form-select"
             >
-              {
-                ville.map(cityArray=>{
-                    
-                      return(
-                        <option key={cityArray} value={cityArray}>{cityArray}</option>
-                      )
-                    })
-                
-              }
+              {ville.map((cityArray) => {
+                return (
+                  <option key={cityArray} value={cityArray}>
+                    {cityArray}
+                  </option>
+                );
+              })}
             </select>
           </div>
           <div className="row mb-4">
@@ -218,7 +225,7 @@ function Reservation() {
             <div className="col">
               <div className="form-outline">
                 <label className="form-label" htmlFor="heureVoyage">
-                 Heure de Voyage
+                  Heure de Voyage
                 </label>
                 <input
                   type="time"
@@ -237,7 +244,7 @@ function Reservation() {
           <button type="submit" className="btn btn-primary btn-block mb-4">
             Enregister
           </button>
-          <ToastContainer/>
+          <ToastContainer />
         </form>
       </div>
     </>
