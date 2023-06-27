@@ -48,7 +48,7 @@ function Register() {
 
       const { success, message } = data;
 
-      if (success) {
+      if(success){
         handleSuccess(message);
         setTimeout(() => {
           navigate("/login");

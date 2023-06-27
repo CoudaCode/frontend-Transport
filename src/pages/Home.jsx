@@ -10,16 +10,16 @@ function Home() {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    console.log(cookies);
-    const verifyCookie = async () => {
+    console.log(cookies.token);
+    const verifyCookie = async () =>{
       // Verification si la cookie exites
-      if (!cookies.token) {
+      if (!cookies.token){
         navigate("/login");
       }
       const { data } = await axios.post(
         "http://localhost:4000/user",
         {},
-        { withCredentials: true }
+        { withCredentials:true}
       );
       const { status, user } = data;
       console.log(data);

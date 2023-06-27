@@ -1,3 +1,29 @@
 #root {
- width: 100%;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Acceuil .carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+.Acceuil .btn-link{
+      text-decoration:none;
+      color: black;
+}
+.Acceuil .carousel-caption{
+  margin-bottom: 20%;
+  line-height: 2.4;
+  font-size: 20px;
+}
+ 
