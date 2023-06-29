@@ -2,7 +2,7 @@ import "./../footer/Footer.css";
 function Footer() {
   return (
     <>
-      <div classNameName="Footer">
+      <div className="Footer">
         {/* <!-- Footer --> */}
         <div className="d-flex flex-column h-100">
           <footer className="w-100 py-4 flex-shrink-0">
@@ -44,23 +44,21 @@ function Footer() {
                   <h5 className="text-white mb-3">Nos Contcatcs</h5>
                   <ul className="list-unstyled text-muted">
                     <li>
-                      <i class="fas fa-print me-3"></i>
+                      <i className="fas fa-print me-3"></i>
                       <a href="#">+225 01 01 01 01 01</a>
                     </li>
                     <li>
-                      <i class="fas fa-phone me-3"></i>
+                      <i className="fas fa-phone me-3"></i>
                       <a href="#">+225 01 01 01 01 01</a>
                     </li>
                     <li>
-                      <i class="fas fa-home me-3"></i>
+                      <i className="fas fa-home me-3"></i>
                       <a href="#">Abdijan , Adjame Renauld</a>
                     </li>
                     <li>
-                      <i class="fas fa-envelope me-3"></i>
+                      <i className="fas fa-envelope me-3"></i>
                       <a href="#">amt_transport@gmail.com</a>
                     </li>
-                    
-        
                   </ul>
                 </div>
               </div>

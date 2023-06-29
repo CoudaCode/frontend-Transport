@@ -62,10 +62,10 @@ function Navbar() {
                 {/* <!-- Left links --> */}
 
                 <div className="d-flex align-items-center">
-                  <button type="button" className="btn btn-link px-3 me-2">
+                  <button type="button" className="btn btn-link px-3 me-2" style={{color : "white"}}>
                     se Connexion
                   </button>
-                  <button type="button" className="btn btn-primary me-3">
+                  <button type="button" className="btn btn-primary me-3" style={{background: "#212529"}}>
                     S'inscrire
                   </button>
                   

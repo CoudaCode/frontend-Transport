@@ -1,5 +1,7 @@
 import Navbar from "./../Components/header/Navbar";
 import Footer from "./../Components/footer/Footer";
+import {Link} from "react-router-dom"
+
 
 function Acceuil() {
   return (
@@ -38,7 +40,7 @@ function Acceuil() {
               <div
                 className="carousel-item active"
                 style={{
-                  backgroundImage: `url('https://source.unsplash.com/RCAhiGJsUUE/1920x1080')`,
+                  backgroundImage: `url('https://images.pexels.com/photos/4099808/pexels-photo-4099808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
                 }}
               >
                 <div className="carousel-caption">
@@ -55,7 +57,7 @@ function Acceuil() {
               <div
                 className="carousel-item"
                 style={{
-                  backgroundImage: `url('https://source.unsplash.com/wfh8dDlNFOk/1920x1080')`,
+                  backgroundImage: `url('https://images.pexels.com/photos/2533090/pexels-photo-2533090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
                 }}
               >
                 <div className="carousel-caption">
@@ -68,7 +70,7 @@ function Acceuil() {
               <div
                 className="carousel-item"
                 style={{
-                  backgroundImage: `url('https://source.unsplash.com/lHGeqh3XhRY/1920x1080')`,
+                  backgroundImage: `url('https://images.pexels.com/photos/2046787/pexels-photo-2046787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
                 }}
               >
                 <div className="carousel-caption">
@@ -108,7 +110,6 @@ function Acceuil() {
             </button>
           </div>
         </header>
-        <div></div>
 
         <div className="container my-5">
           <h2 className="text-center"></h2>
@@ -124,18 +125,21 @@ function Acceuil() {
               </p>
             </div>
           </div>
-          <div className="row ">
+          <div className="row">
             <div className="col-sm-4">
               <div className="card">
                 <img
-                  src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
+                  src={
+                    "https://avatars.mds.yandex.net/i?id=efb0151e97285db08285f72b0db9d1d8b40e2a07-5244939-images-thumbs&n=13"
+                  }
                   className="card-img-top"
                   alt="Sunset Over the Sea"
                 />
                 <div className="card-body">
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    nous vous voudrons à embarquer pour des expériences
+                    inoubliables et à créer des souvenirs qui dureront toute une
+                    vie.
                   </p>
                 </div>
               </div>
@@ -143,14 +147,15 @@ function Acceuil() {
             <div className="col-sm-4">
               <div className="card">
                 <img
-                  src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
+                  src={
+                    "https://avatars.mds.yandex.net/i?id=33a0ba014b81cbdb859c820d1f600da262f9f5da-5219488-images-thumbs&n=13"
+                  }
                   className="card-img-top"
                   alt="Sunset Over the Sea"
                 />
                 <div className="card-body">
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Découvrez le monde et réservez vos aventures inoubliables
                   </p>
                 </div>
               </div>
@@ -158,108 +163,67 @@ function Acceuil() {
             <div className="col-sm-4">
               <div className="card">
                 <img
-                  src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
+                  src={
+                    "https://avatars.mds.yandex.net/i?id=d7b54e8145d834b9fe73e86b61c3e57da8dbf965-7594176-images-thumbs&n=13"
+                  }
                   className="card-img-top"
                   alt="Sunset Over the Sea"
                 />
                 <div className="card-body">
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Explorez le monde et réservez votre prochaine aventure !
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="container my-5">
-          <h2 className="text-center">
+        <div className="container my-5 mx-5">
+          <h2 className="text-center my-5">
             Planifiez votre voyage en toute confiance
           </h2>
 
-          <div className="row ">
-            <div className="col-sm-4">
+          <div className="row">
+            <div className="col-sm-6">
               <div className="card">
                 <div
                   className="bg-image hover-overlay ripple"
                   data-mdb-ripple-color="light"
                 >
-                  <img
-                    src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
-                    className="img-fluid"
-                  />
                   <a href="#!">
-                    <div
-                      className="mask"
-                    ></div>
+                    <div className="mask"></div>
                   </a>
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text text-center">
-                        <h1>Voyagez depuis ABIDJAN</h1>
-                  </p>
-                  <a href="#!" class="btn btn-primary">
-                    Reserver mon ticket pour abidjan
-                  </a>
+                  <div className="card-text text-center">
+                    <h1>CONFORTABLE</h1>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="col-sm-4">
-            <div className="card">
-                <div
-                  className="bg-image hover-overlay ripple"
-                  data-mdb-ripple-color="light"
-                >
-                  <img
-                    src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
-                    className="img-fluid"
-                  />
-                  <a href="#!">
-                    <div
-                      className="mask"
-                    ></div>
-                  </a>
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text text-center">
-                        <h1>Voyagez depuis ABIDJAN</h1>
-                  </p>
-                  <a href="#!" class="btn btn-primary">
-                    Reserver mon ticket pour abidjan
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-4">
+            <div className="col-sm-6">
               <div className="card">
                 <div
                   className="bg-image hover-overlay ripple"
                   data-mdb-ripple-color="light"
                 >
-                  <img
-                    src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
-                    className="img-fluid"
-                  />
                   <a href="#!">
-                    <div
-                      className="mask"
-                    ></div>
+                    <div className="mask"></div>
                   </a>
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text text-center">
-                        <h1>Voyagez depuis ABIDJAN</h1>
-                  </p>
-                  <a href="#!" class="btn btn-primary">
-                    Reserver mon ticket pour abidjan
-                  </a>
+                  <div className="card-text text-center">
+                    <h1>SECRUITE GARANTIE</h1>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className="container my-5 mx-5">
+          <button className="btn btn-dark">
+            <Link to={"/Statut"}>Cliquez ici pour faire un reservation</Link>
+          </button>
         </div>
         <Footer />
       </div>

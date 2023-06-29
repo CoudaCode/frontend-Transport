@@ -6,6 +6,7 @@ import Reservation from './pages/Reservation'
 import Acceuil from "./pages/Acceuil"
 import Contact from "./pages/contact"
 import Apropos from "./pages/Apropos"
+import Statut from "./pages/Statut"
 import {BrowserRouter ,Routes, Route, Router} from "react-router-dom"
 import './App.css'
 
@@ -18,6 +19,7 @@ function App() {
             <BrowserRouter>
               <Routes>
                     <Route path='/' element={<Acceuil/>}/>
+                    <Route path='/Statut' element={<Statut/>}/>
                     <Route path='/Contact' element={<Contact/>}/>
                     <Route path='/Apropos' element={<Apropos/>}/>
                     <Route path='/Home' element={<Home/>}/>
