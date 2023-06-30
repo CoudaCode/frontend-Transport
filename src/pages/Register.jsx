@@ -4,6 +4,9 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "./../Register.css";
 import "react-toastify/dist/ReactToastify.css";
+import Navbar from "../Components/header/Navbar";
+import Footer from "../Components/footer/Footer";
+
 function Register() {
   const navigate = useNavigate();
 
@@ -70,6 +73,7 @@ function Register() {
   };
   return (
     <>
+      <Navbar/>
       <div
         className="form_container"
         style={{ width: "18rem", margin: "10% auto" }}
@@ -141,7 +145,7 @@ function Register() {
               onChange={handleOnChange}
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-dark">
             Submit
           </button>
           <span>
@@ -150,6 +154,7 @@ function Register() {
         </form>
         <ToastContainer />
       </div>
+      <Footer/>
     </>
   );
 }

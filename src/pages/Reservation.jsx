@@ -241,7 +241,7 @@ function Reservation() {
             </div>
           </div>
           {/* <!-- Submit button --> */}
-          <button type="submit" className="btn btn-primary btn-block mb-4">
+          <button type="submit" className="btn btn-dark btn-block mb-4">
             Enregister
           </button>
           <ToastContainer />

@@ -4,7 +4,8 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "./../Register.css";
 import "react-toastify/dist/ReactToastify.css";
-
+import Navbar from "./../Components/header/Navbar";
+import Footer from "./../Components/footer/Footer";
 function Login() {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({
@@ -60,6 +61,7 @@ function Login() {
   };
   return (
     <>
+      <Navbar/>
       <div
         className=".form_container"
         style={{ width: "18rem", margin: "10% auto" }}
@@ -103,6 +105,7 @@ function Login() {
         </form>
         <ToastContainer />
       </div>
+      <Footer/>
     </>
   );
 }

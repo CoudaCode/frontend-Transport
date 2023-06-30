@@ -4,6 +4,8 @@ import { useCookies } from "react-cookie";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Navbar from "./../Components/header/Navbar";
+import Footer from "./../Components/footer/Footer";
 function Home() {
   const navigate = useNavigate();
   const [cookies, removeCookie] = useCookies([]);
@@ -40,7 +42,10 @@ function Home() {
 
   const notify = () => toast("Wow so easy!");
   return (
+
+    
     <>
+      <Navbar/>
       <div className="home_page" style={{ width: "100%", textAlign: "center" }}>
         <h4>
           {" "}
@@ -49,6 +54,8 @@ function Home() {
         <button onClick={Logout}>LOGOUT</button>
       </div>
       <ToastContainer />
+
+      <Footer/>
     </>
   );
 }
