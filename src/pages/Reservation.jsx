@@ -37,7 +37,7 @@ function Reservation() {
   const nowValue = new Date().getDate();
   console.log(nowValue);
   function fetchData() {
-    fetch("http://localhost:4000/Reservation/ville")
+    fetch("https://backendapitransport.onrender.com/Reservation/ville")
       .then((resp) => resp.json())
       .then((response) => {
         console.log(response);
@@ -62,7 +62,7 @@ function Reservation() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/Reservation/addReservation",
+        "https://backendapitransport.onrender.com/Reservation/",
         {
           ...form,
         },

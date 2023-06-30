@@ -222,7 +222,7 @@ function Acceuil() {
         </div>
         <div className="container my-5 mx-5">
           <button className="btn btn-dark">
-            <Link to={"/Statut"}>Cliquez ici pour faire un reservation</Link>
+            <Link to={"/Reservation"}>Cliquez ici pour faire un reservation</Link>
           </button>
         </div>
         <Footer />

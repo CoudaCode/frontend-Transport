@@ -43,8 +43,7 @@ function Acceuil() {
               >
                 <div className="carousel-caption">
                   <h2>
-                    Ayez une avance sur la disponibilité de nos cars afin de
-                    mieux faire vos reservation pour vos tickets de voyage
+                   Veuillez voir la disponibilité de Nos cars afin de reservez vos ticket
                   </h2>
                   <p>
                     Découvrez le monde avec facilité et réservez vos billets en
@@ -109,21 +108,7 @@ function Acceuil() {
           </div>
         </header>
 
-        <div className="container my-5">
-          <h2 className="text-center"></h2>
-          <div className="card shadow-2-strong text-center my-5">
-            <div className="card-body">
-              <p className="card-text">
-                Bienvenue sur notre site de réservation de billets, votre
-                portail vers des voyages passionnants et des aventures sans fin.{" "}
-                <br />
-                Les services de voyages en groupe d'AMT-TRANSPORT vous
-                facilitent la tâche. AMT-TRANSPORT s’occupe des formalités de
-                vos voyages en groupe et individuel
-              </p>
-            </div>
-          </div>
-        </div>
+       
 
         <div className="container my-5 mx-5">
        

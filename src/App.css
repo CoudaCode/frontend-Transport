@@ -18,13 +18,13 @@ body{
     background-size: cover;
     backdrop-filter: blur(10px);
   }
-.Acceuil .btn-link{
+/* .Acceuil .btn-link{
       text-decoration:none;
       color: black;
 
 
       
-}
+} */
 .Acceuil .carousel-caption{
   margin-bottom: 20%;
   line-height: 2.4;

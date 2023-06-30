@@ -39,7 +39,7 @@ function Register() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/user/addUser",
+        "https://backendapitransport.onrender.com/user/",
         {
           ...inputValue,
         },

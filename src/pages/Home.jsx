@@ -17,7 +17,7 @@ function Home() {
         navigate("/login");
       }
       const { data } = await axios.post(
-        "http://localhost:4000/user",
+        "https://backendapitransport.onrender.com/user",
         {},
         { withCredentials:true}
       );
