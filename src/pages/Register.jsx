@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-import "./../Register.css";
+// import "./../Register.css";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "../Components/header/Navbar";
 import Footer from "../Components/footer/Footer";

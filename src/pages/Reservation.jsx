@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Navbar from "../Components/header/Navbar";
+import Footer from "../Components/footer/Footer";
+
 function Reservation() {
   const navigate = useNavigate();
   const [ville, setVille] = useState([]);
@@ -95,6 +98,7 @@ function Reservation() {
   }
   return (
     <>
+    <Navbar/>
       <div
         className="reservation"
         style={{ width: "400px", margin: "10% auto" }}
@@ -247,6 +251,7 @@ function Reservation() {
           <ToastContainer />
         </form>
       </div>
+      <Footer/>
     </>
   );
 }
